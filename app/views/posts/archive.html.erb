@@ -1,0 +1,8 @@
+<div id="archive">
+  <% @archive_posts.each do |month, posts| %>
+  <h4><%= "#{month.strftime('%B %Y')} (#{posts.count})" %></h4>
+    <% for post in posts %>
+      <li><%= link_to post.title, post %></li>
+    <% end %>
+  <% end %>
+</div>

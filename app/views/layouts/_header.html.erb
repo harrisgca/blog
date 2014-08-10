@@ -1,0 +1,17 @@
+<h1>A Single Step - Rails Edition</h1>
+<h5>About Web Development</h5>
+
+<div class="row">
+  <div class="col-md-12">
+      <div class="header">
+        <%= link_to image_tag("header/#{rand(1..7)}.jpg"), root_path %>
+      </div>
+  </div>
+  
+<ul id="headnav">
+	<li><%= link_to "Home", root_path %></li>
+  <li><a href="../pages/about">About</a></li>
+  <li><a href="../pages/projects">Projects</a></li>
+  <li><a href="../pages/contact">Contact</a></li>
+	
+</ul>

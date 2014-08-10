@@ -1,0 +1,40 @@
+
+  <div class="col-md-9">
+    <p>
+      <h2> <%= @post.title %></h2>
+    </p>
+     
+    <p>
+      <%= @post.text.html_safe %>
+    </p>
+    <p> <%= render 'share' %></p>
+   </div>
+
+<div class="col-md-3">
+    
+    <p>RECENT POSTS</p>
+    <p><% @recent_posts.each do |post| %>
+      <li><%= link_to post.title, post %></li>
+      <% end %>
+    </p>
+    <hr>
+
+    <p><%= link_to "FULL ARCHIVES", archive_posts_path %></p>
+    <hr>
+
+    <div class="profile ">
+      <p><%= image_tag("profile.jpg") %></p><hr>
+    </div>    
+    <div class="twitter">
+      FOLLOW ME ON TWITTER
+      <%= render 'widget' %>
+    </div>
+
+
+  </div>
+</div>
+
+
+
+
+<p><%= link_to "Go Back", posts_path %>

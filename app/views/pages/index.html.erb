@@ -1,0 +1,6 @@
+  <% @pages.each do |page| %>
+    <p><%= link_to page.title, page %></p>
+    <p><%= link_to "Edit", edit_page_path(page) %> | <%= link_to "Delete Page", page_path(page),
+        method: :delete, data: { confirm: "Are you sure?" } %></p>
+  <% end %>
+
